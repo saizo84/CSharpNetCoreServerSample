@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+
+import "auth.proto";
+
+option csharp_namespace = "Sample.Proto";
+
+package SampleServer;
+
+service NetCoreService {
+  rpc Login (LoginRequest) returns (LoginResponse);
+}

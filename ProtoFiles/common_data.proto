@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Sample.Proto";
+
+package SampleServer;
+
+enum ResultCodes {
+	Abnormal = 0;
+	Success = 1;
+	Fail = 2;
+}

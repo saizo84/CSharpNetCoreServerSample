@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\ProtoFiles\auth.proto" ProtoRoot="..\ProtoFiles" Link="auth.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\ProtoFiles\net_core_service.proto" ProtoRoot="..\ProtoFiles" Link="net_core_service.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.17.0" />
+    <PackageReference Include="Grpc.Core" Version="2.37.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.37.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonPoroto\CommonPoroto.csproj" />
+  </ItemGroup>
+
+</Project>

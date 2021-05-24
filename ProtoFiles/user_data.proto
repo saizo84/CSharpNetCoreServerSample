@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Sample.Proto";
+
+package SampleServer;
+
+enum OsTypes {
+	OsNone = 0;
+	Android = 1;
+	IOS = 2;
+	PC = 3;
+}
+
+enum PlatformTypes {
+	PlatformNone = 0;
+	Guest = 1;
+	GooglePlay = 2;
+	GameCenter = 3;
+}
+
+message DeviceInfo {
+	string Model = 1;
+    string MCC = 2;
+    string OsVersion = 3;
+    OsTypes OsType = 4;
+    string DeviceId = 5;
+	string PushToken = 6;
+}
+
+message UserInfo {
+	string Nickname = 1;
+	int32 Level = 2;
+	int32 Exp = 3;
+}

@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+import "common_data.proto";
+import "user_data.proto";
+
+option csharp_namespace = "Sample.Proto";
+
+package SampleServer;
+
+message LoginRequest {
+	string Guid = 1;
+	string PlatformPassword = 2;
+	DeviceInfo DeviceInfo = 3;
+}
+
+message LoginResponse {
+	ResultCodes	ResultCode = 1;
+	UserInfo UserInfo = 2;
+}

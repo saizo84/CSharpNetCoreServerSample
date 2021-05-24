@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "AuthContext": "Server=127.0.0.1;Database=sample_test;Uid=root;Pwd=!4253zs!"
+  }
+}
